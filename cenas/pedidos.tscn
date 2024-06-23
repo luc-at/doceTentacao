@@ -1,0 +1,152 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0erob85paqox"]
+
+[ext_resource type="PackedScene" uid="uid://b6yk4j0geheru" path="res://cenas/dialogue_scene.tscn" id="1_4ljba"]
+[ext_resource type="PackedScene" uid="uid://ljnbgl0edtkg" path="res://assets/cenários/recepção/cenário completo2.glb" id="2_jp17n"]
+[ext_resource type="PackedScene" uid="uid://djwnocjj6d3nc" path="res://cenas/personagens/cherry_2_6.tscn" id="3_xaxw8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0870h"]
+size = Vector3(7.97894, 0.0388641, 10.7562)
+
+[sub_resource type="Animation" id="Animation_02fsp"]
+resource_name = "Chegando"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.1),
+"transitions": PackedFloat32Array(1, 0.233259),
+"update": 0,
+"values": [Vector3(-1.72894, -0.0163451, -5.26273), Vector3(-0.226681, -0.0163451, 1.15979)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.9, 2.5),
+"transitions": PackedFloat32Array(1, 0.258817),
+"update": 0,
+"values": [Vector3(0, 0.209928, 0), Vector3(0, 0.00973894, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_23dsp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.72894, -0.0163451, -5.26273)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.209928, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iqvis"]
+_data = {
+"Chegando": SubResource("Animation_02fsp"),
+"RESET": SubResource("Animation_23dsp")
+}
+
+[node name="Pedidos" type="Node3D"]
+
+[node name="cenário completo2" parent="." instance=ExtResource("2_jp17n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.138589, -1.19209e-07, 2.32636)
+
+[node name="Chão" type="StaticBody3D" parent="cenário completo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.33576)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cenário completo2/Chão"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00131229, -0.0180283, -2.55878)
+shape = SubResource("BoxShape3D_0870h")
+
+[node name="Iluminação" type="Node3D" parent="."]
+
+[node name="luz_balcão" type="OmniLight3D" parent="Iluminação"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.138589, 2.20721, 2.32636)
+light_energy = 2.0
+light_specular = 0.8
+shadow_enabled = true
+shadow_opacity = 0.8
+shadow_blur = 10.0
+omni_range = 3.56393
+
+[node name="Luz_01" type="OmniLight3D" parent="Iluminação"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.138589, 2.20138, -0.632183)
+light_energy = 4.0
+shadow_enabled = true
+shadow_opacity = 0.8
+shadow_blur = 10.0
+
+[node name="Luz_03" type="OmniLight3D" parent="Iluminação"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.84599, 2.20138, -0.632183)
+light_energy = 4.0
+shadow_enabled = true
+shadow_opacity = 0.8
+shadow_blur = 10.0
+
+[node name="Luz_04" type="OmniLight3D" parent="Iluminação"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17508, 2.20138, -0.632183)
+light_energy = 4.0
+shadow_enabled = true
+shadow_opacity = 0.8
+shadow_blur = 10.0
+
+[node name="Luz_02" type="OmniLight3D" parent="Iluminação"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.22504, -3.40431)
+shadow_enabled = true
+shadow_opacity = 0.8
+shadow_blur = 10.0
+
+[node name="Luz_janela" type="SpotLight3D" parent="Iluminação"]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0.905874, 1.70159, -4.55533)
+light_color = Color(1, 1, 0.607843, 1)
+light_indirect_energy = 2.0
+shadow_enabled = true
+shadow_opacity = 0.6
+shadow_blur = 10.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Iluminação"]
+transform = Transform3D(0.999998, -0.00204203, 1.7852e-10, -0.00204203, -0.999998, 8.74226e-08, 0, -8.74228e-08, -1, -1.68297, 0.120212, -5.34944)
+light_color = Color(0.968627, 0.960784, 0.878431, 1)
+light_energy = 8.0
+shadow_enabled = true
+shadow_opacity = 0.8
+shadow_blur = 10.0
+
+[node name="cherry2_6" parent="." instance=ExtResource("3_xaxw8")]
+transform = Transform3D(0.120288, 0, 0.0256294, 0, 0.122988, 0, -0.0256294, 0, 0.120288, -1.72894, -0.0163451, -5.26273)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="cherry2_6"]
+libraries = {
+"": SubResource("AnimationLibrary_iqvis")
+}
+
+[node name="Interface_2D" type="Node2D" parent="."]
+
+[node name="Dialogue_Scene" parent="Interface_2D" instance=ExtResource("1_4ljba")]
+position = Vector2(386, 198)
+
+[connection signal="personagem_chegou_no_balcão" from="cherry2_6" to="Interface_2D/Dialogue_Scene" method="_on_cherry_2_6_personagem_chegou_no_balcão"]
+[connection signal="animation_finished" from="cherry2_6/AnimationPlayer2" to="cherry2_6" method="_on_animation_player_2_animation_finished"]
+[connection signal="animação_andar" from="Interface_2D/Dialogue_Scene" to="cherry2_6" method="_on_dialogue_scene_animação_andar"]

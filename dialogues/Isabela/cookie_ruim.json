@@ -1,0 +1,22 @@
+[
+	{
+		"commands_raw": "signal(voz,voz_personagem,true)\n[b]Cookie Monstrão[/b]\nPô, cara! Nada a ver esse bolo!\nSe eu não tivesse atrazado pro Cross Fit eu te pegava ali nos fundos.\n?> Desculpa, prometo acertar em uma próxima! {\nsignal(voz,voz_personagem,false)\nsignal(sai,true)\n-> fim\n}\n?> Ei, cara, não precisa ficar irritado! {\nsignal(voz,voz_personagem,false)\nsignal(sai,true)\n-> fim\n}\n",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			480,
+			200
+		]
+	},
+	{
+		"commands_raw": "Fique esperto! Precisamos prestar atenção nos pedidos dos clientes",
+		"gnode_name": "fim",
+		"id": 1,
+		"name": "fim",
+		"position": [
+			580,
+			200
+		]
+	}
+]

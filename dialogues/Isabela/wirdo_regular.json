@@ -1,0 +1,22 @@
+[
+	{
+		"commands_raw": "signal(voz,voz_personagem,true)\n[b]Wirdo Umbrella[/b]\nUm bolo regular. Como a minha vida.\nNão sei porque esperei mais do que isso.\n\n?> Quem sabe da próxima... {\nsignal(voz,voz_personagem,false)\nsignal(sai,true)\n->fim\n}\n?> Para te ensinar a nunca desejar demais!{\nsignal(voz,voz_personagem,false)\nsignal(sai,true)\n->fim\n}",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			1500,
+			1900
+		]
+	},
+	{
+		"commands_raw": "Foi bom...mas pode melhorar!",
+		"gnode_name": "fim",
+		"id": 1,
+		"name": "fim",
+		"position": [
+			1720,
+			1780
+		]
+	}
+]

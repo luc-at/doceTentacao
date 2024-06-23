@@ -1,0 +1,130 @@
+[gd_scene load_steps=6 format=3 uid="uid://c783n04kf8du2"]
+
+[ext_resource type="Script" path="res://ui/colocarDecoracao.gd" id="1_dr51j"]
+[ext_resource type="Theme" uid="uid://dyj2k5tdhovo6" path="res://themes/estilo1.tres" id="2_ct58s"]
+[ext_resource type="Theme" uid="uid://npc8poofwvw" path="res://themes/estiloDecor.tres" id="2_pjkvg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrrlm"]
+bg_color = Color(0.929412, 0.909804, 0.968627, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.909804, 0.741176, 0.870588, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 20
+
+[sub_resource type="Theme" id="Theme_desrw"]
+Panel/styles/panel = SubResource("StyleBoxFlat_xrrlm")
+
+[node name="Decoracao" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -52.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dr51j")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -175.5
+offset_top = -40.0
+offset_right = 175.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Decor1" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_pjkvg")
+text = "Cereja"
+
+[node name="Decor2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_pjkvg")
+text = "Chantily"
+
+[node name="Decor3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_pjkvg")
+text = "Coração"
+
+[node name="Decor4" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_pjkvg")
+text = "Frango"
+
+[node name="Decor5" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_pjkvg")
+text = "Aranha"
+
+[node name="FinalBolo" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -183.0
+offset_top = -31.0
+offset_right = -71.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_ct58s")
+text = "Finalizar Bolo"
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 425.0
+offset_top = -2.0
+offset_right = -425.0
+offset_bottom = -595.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_desrw")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.0
+offset_top = -19.0
+offset_right = 151.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center][font=res://assets/Isabela/fonts/Roboto-Bold.ttf] [color=#2a0746]ESCOLHA UMA DAS [color=#f98d7d]DECORAÇÕES[/color] E ATIRE NO BOLO COM O MOUSE![/color] [/font][/center]
+"
+fit_content = true
+
+[connection signal="pressed" from="HBoxContainer/Decor1" to="." method="_on_decor_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/Decor2" to="." method="_on_decor_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Decor3" to="." method="_on_decor_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/Decor4" to="." method="_on_decor_4_pressed"]
+[connection signal="pressed" from="HBoxContainer/Decor5" to="." method="_on_decor_5_pressed"]
+[connection signal="pressed" from="FinalBolo" to="." method="_on_final_bolo_pressed"]

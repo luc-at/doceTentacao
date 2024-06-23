@@ -1,0 +1,62 @@
+[
+	{
+		"commands_raw": "Nosso primeiro cliente deve chegar a qualquer momento...\n?>... {\nsignal(entra,entrada_personagem,true)\n-> entrada personagem\n}",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			60,
+			180
+		]
+	},
+	{
+		"commands_raw": "[b]Cookie Monstrão[/b]\nFala cara! Blz?\nMinha mina sempre me traz uns bolos TOP daqui, \nqueria encomendar um!\n\n\n?> Que bacana! Qual o nome dela? -> namorada\n?> Como você quer o seu bolo? {\nsignal(emote,monstro)\n-> pedido\n} \n",
+		"gnode_name": "inicio cookie",
+		"id": 1,
+		"name": "inicio cookie",
+		"position": [
+			320,
+			200
+		]
+	},
+	{
+		"commands_raw": "[b]Cookie Monstrão[/b]\nCara...vou te falar que não lembro muito o nome dela não...\nAcho que era [b]Che[/b]ila? Ou será que era Ma[b]rry[/b]?\n?> Melhor falar sobre o bolo... {\nsignal(emote,monstro)\n-> pedido\n} \n?> A gente tem tanta coisa na cabeça, né...\nComo você vai querer o seu bolo? {\nsignal(emote,monstro)\n-> pedido\n} ",
+		"gnode_name": "namorada",
+		"id": 2,
+		"name": "namorada",
+		"position": [
+			440,
+			80
+		]
+	},
+	{
+		"commands_raw": "[b]Cookie Monstrão[/b]\nTô indo para a academia agora e quero algo para o pré-treino!\nTambém quero algo que lembre o meu shape, [b]GRANDÃO[/b]!\n?> Bolo de pré-treino? Pode deixar... {\nsignal(voz,voz_personagem,false)\nsignal(emote,idle)\n-> fim\n}\n?> Combinado! {\nsignal(voz,voz_personagem,false)\nsignal(emote,idle)\n-> fim\n}",
+		"gnode_name": "pedido",
+		"id": 4,
+		"name": "pedido",
+		"position": [
+			440,
+			240
+		]
+	},
+	{
+		"commands_raw": "Para a cozinha!",
+		"gnode_name": "fim",
+		"id": 5,
+		"name": "fim",
+		"position": [
+			600,
+			180
+		]
+	},
+	{
+		"commands_raw": "Olha! Lá vem ele!\n--- {\nsignal(voz,voz_personagem,true)\n->inicio cookie\n}\n",
+		"gnode_name": "entrada personagem",
+		"id": 6,
+		"name": "entrada personagem",
+		"position": [
+			160,
+			200
+		]
+	}
+]

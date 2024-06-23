@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpfgcigim1qwi"]
+
+[ext_resource type="PackedScene" uid="uid://d07qky7aygul6" path="res://Elementos/cobertura/quadrado preto.glb" id="1_h7hat"]
+
+[node name="quadrado preto" instance=ExtResource("1_h7hat")]
+
+[node name="Cube_018" parent="." index="0"]
+transform = Transform3D(0.032, 0, 0, 0, 0.032, 0, 0, 0, 0.032, 0, 0, 0)

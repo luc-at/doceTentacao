@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxnah2ai5q1lo"]
+
+[ext_resource type="PackedScene" uid="uid://bpil5e883p1an" path="res://Elementos/cobertura/coracao vermelho.glb" id="1_72203"]
+
+[node name="coracao vermelho" instance=ExtResource("1_72203")]
+
+[node name="Circle_013" parent="." index="0"]
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0, 0, 0)

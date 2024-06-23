@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=3 uid="uid://d0erob85paqox"]
+
+[ext_resource type="PackedScene" uid="uid://b6yk4j0geheru" path="res://cenas/dialogue_scene.tscn" id="2_ibql7"]
+[ext_resource type="JSON" path="res://dialogues/Isabela/pedido.json" id="2_pee46"]
+[ext_resource type="PackedScene" uid="uid://wjnt7scatehh" path="res://cenas/Isabela/personagens/Cookie/Cookie_Sem_Caixa.tscn" id="5_f7m12"]
+[ext_resource type="PackedScene" uid="uid://52svw2c82d53" path="res://cenas/Isabela/cenários/Recepção_cenário.tscn" id="5_m41p7"]
+[ext_resource type="Script" path="res://scripts/Isabela/Cookie_Personagem.gd" id="6_mdsct"]
+
+[sub_resource type="Animation" id="Animation_v0ehn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.68988, -0.522719, -6.36298)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nrgkw"]
+resource_name = "chegando"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.68988, -0.522719, -6.36298), Vector3(-1.68988, -0.522719, -2.60262), Vector3(-0.178361, -0.522719, 0.696905)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.1, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0.513179, 0), Vector3(0, 0.0208916, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3bt0r"]
+_data = {
+"RESET": SubResource("Animation_v0ehn"),
+"chegando": SubResource("Animation_nrgkw")
+}
+
+[node name="Pedido 1" type="Node3D"]
+
+[node name="Interface_2D" type="Node2D" parent="."]
+
+[node name="Dialogue_Scene" parent="Interface_2D" instance=ExtResource("2_ibql7")]
+position = Vector2(386, 198)
+dialogue1_json = ExtResource("2_pee46")
+
+[node name="Cenário recepção" parent="." instance=ExtResource("5_m41p7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.139, 0, 2.326)
+
+[node name="Cookie_6CAIXA" parent="." instance=ExtResource("5_f7m12")]
+transform = Transform3D(0.293, 0, 0, 0, 0.293, 0, 0, 0, 0.293, -1.68988, -0.522719, -6.36298)
+script = ExtResource("6_mdsct")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Cookie_6CAIXA"]
+libraries = {
+"": SubResource("AnimationLibrary_3bt0r")
+}
+
+[connection signal="animação_andar" from="Interface_2D/Dialogue_Scene" to="Cookie_6CAIXA" method="_on_dialogue_scene_animação_andar"]
+[connection signal="animação_monstro" from="Interface_2D/Dialogue_Scene" to="Cookie_6CAIXA" method="_on_dialogue_scene_animação_monstro"]
+[connection signal="animation_finished" from="Cookie_6CAIXA/AnimationPlayer2" to="Cookie_6CAIXA" method="_on_animation_player_2_animation_finished"]

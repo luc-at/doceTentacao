@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d08ga8emuxkq1"]
+
+[ext_resource type="PackedScene" uid="uid://bk5lewbv3m8ig" path="res://Elementos/bolo assado/coracao morango.glb" id="1_q77oq"]
+
+[node name="coracao morango" instance=ExtResource("1_q77oq")]
+
+[node name="Circle_006" parent="." index="0"]
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0, 0, 0)

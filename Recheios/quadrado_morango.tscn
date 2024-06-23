@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://blowtrh610wkh"]
+
+[ext_resource type="PackedScene" uid="uid://cdrbld23ophqu" path="res://Elementos/bolo assado/quadrado morango.glb" id="1_yglgy"]
+
+[node name="quadrado morango" instance=ExtResource("1_yglgy")]
+
+[node name="Cube_012" parent="." index="0"]
+transform = Transform3D(0.35, 0, 0, 0, 0.165, 0, 0, 0, 0.35, 0, 0, 0)

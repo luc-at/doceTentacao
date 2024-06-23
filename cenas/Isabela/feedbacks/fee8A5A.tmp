@@ -1,0 +1,168 @@
+[gd_scene load_steps=8 format=3 uid="uid://b5ck2jo0g1c1r"]
+
+[ext_resource type="PackedScene" uid="uid://52svw2c82d53" path="res://cenas/Isabela/cenários/Recepção_cenário.tscn" id="1_ns33n"]
+[ext_resource type="PackedScene" uid="uid://bccpj3c5fousp" path="res://cenas/Isabela/feedbacks/2D_Layout_Feedback_Cookies.tscn" id="1_oscdv"]
+[ext_resource type="PackedScene" uid="uid://c3dthqlmhit20" path="res://cenas/Isabela/personagens/Cookie/Cookie_Caixa.tscn" id="3_4v5gx"]
+[ext_resource type="Script" path="res://scripts/Isabela/Feedbacks/Cookie_Caixa.gd" id="4_8lfl5"]
+
+[sub_resource type="Animation" id="Animation_xdcgc"]
+resource_name = "embora"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.414563, -0.25, 0, 0.25, 0, -1.56484, -0.25, 0, 0.25, 0, -1.56484, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 1.5, 2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(-0.520688, -0.25, 0, 0.25, 0, -0.520688, -0.25, 0, 0.25, 0, -0.520688, -0.25, 0, 0.25, 0, -0.520688, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 1.5, 2)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(-2.01391, -0.25, 0, 0.25, 0, -0.801308, -0.25, 0, 0.25, 0, -5.30488, -0.25, 0, 0.25, 0, -7.75815, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 1.5, 2)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 1.5)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -2.45289, -0.25, 0, 0.25, 0, -3.13655, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 1.5)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 1.5)
+}
+
+[sub_resource type="Animation" id="Animation_e3bxk"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.520688, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-2.01391, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uuw8e"]
+_data = {
+"RESET": SubResource("Animation_e3bxk"),
+"embora": SubResource("Animation_xdcgc")
+}
+
+[node name="Feedback_Cookie" type="Node3D"]
+
+[node name="Node pai_Feedback Cookie" parent="." instance=ExtResource("1_oscdv")]
+
+[node name="cenário completo2" parent="." instance=ExtResource("1_ns33n")]
+
+[node name="Cookie_6CAIXA" parent="." instance=ExtResource("3_4v5gx")]
+transform = Transform3D(0.293, 0, 0, 0, 0.293, 0, 0, 0, 0.293, 0, -0.520688, -2.01391)
+script = ExtResource("4_8lfl5")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Cookie_6CAIXA"]
+libraries = {
+"": SubResource("AnimationLibrary_uuw8e")
+}
+
+[connection signal="animação_andar" from="Node pai_Feedback Cookie" to="Cookie_6CAIXA" method="_on_node_pai_feedback_cookie_animação_andar"]

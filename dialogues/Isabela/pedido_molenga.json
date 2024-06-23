@@ -1,0 +1,82 @@
+[
+	{
+		"commands_raw": "Acho que logo podemos fechar...conseguimos atender muitos pedidos!\n?> Ufa, estou sem energia {\nsignal(entra,entrada_personagem,true)\n-> entrada\n}\n?> Puxa, como o dia passou rápido! {\nsignal(entra,entrada_personagem,true)\n-> entrada\n}",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			500,
+			260
+		]
+	},
+	{
+		"commands_raw": "Caramba, temos mais um cliente chegando!\n?>...{\nsignal(voz,voz_personagem,true)\n-> apresentação\n}",
+		"gnode_name": "entrada",
+		"id": 1,
+		"name": "entrada",
+		"position": [
+			600,
+			260
+		]
+	},
+	{
+		"commands_raw": "[b]Molenga Umbrella[/b]\nOlá! Vocês já estão fechando?\n?> Sim... mas podemos aceitar mais um pedido -> pedido_01\n?> Imagina! Só fechamos depois de deixar nosso último cliente satisfeito! -> pedido_01",
+		"gnode_name": "apresentação",
+		"id": 2,
+		"name": "apresentação",
+		"position": [
+			700,
+			260
+		]
+	},
+	{
+		"commands_raw": "[b]Molenga Umbrella[/b]\nQue bom! Queria fazer uma surpresa para a minha namorada!\nMeu irmão disse que já viu ela visitar essa doceria, mas eu nunca experimentei nada daqui...\nVou levar um docinho para ela e matar a curiosidade.\n?> Ahhh...qual o nome da sua namorada? -> nome\n?> Entendi. Como vai querer o bolo? -> pedido_02",
+		"gnode_name": "pedido_01",
+		"id": 3,
+		"name": "pedido_01",
+		"position": [
+			820,
+			260
+		]
+	},
+	{
+		"commands_raw": "[b]Molenga Umbrella[/b]\nO nome dela é [b]Cherry[/b]. Você conhece?\n?> Conheço! Mas você nunca experimentou nada daqui? -> corno\n?> Acho que conheço... como você vai querer o seu bolo? -> pedido_02\n?> Não conheço. Vamos falar sobre o bolo? -> pedido_02",
+		"gnode_name": "nome",
+		"id": 4,
+		"name": "nome",
+		"position": [
+			920,
+			200
+		]
+	},
+	{
+		"commands_raw": "[b]Molenga Umbrella[/b]\nNão! Vai ser a primeira vez!\n?> ...Ér...como você vai querer seu bolo? -> pedido_02\n?> Bacana!! Qual vai ser o pedido? -> pedido_02",
+		"gnode_name": "corno",
+		"id": 5,
+		"name": "corno",
+		"position": [
+			1020,
+			200
+		]
+	},
+	{
+		"commands_raw": "[b]Molenga Umbrella[/b]\nEla é um pouco exigente... então quero pedir algo seguro.\nNada que possa despertar opiniões muito fortes. Um bolo, bolo.\nCom cara de bolo.\n?> Combina com você! Fácil de fazer -> fim\n?> Beleza -> fim",
+		"gnode_name": "pedido_02",
+		"id": 6,
+		"name": "pedido_02",
+		"position": [
+			1040,
+			320
+		]
+	},
+	{
+		"commands_raw": "signal(voz,voz_personagem,false)\nVocê também percebeu, né? \nBom... é melhor não se meter em história alheia.\nPara a cozinha!",
+		"gnode_name": "fim",
+		"id": 7,
+		"name": "fim",
+		"position": [
+			1140,
+			320
+		]
+	}
+]

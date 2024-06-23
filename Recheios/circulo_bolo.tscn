@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhd2atdweb65y"]
+
+[ext_resource type="PackedScene" uid="uid://dehky33m33cii" path="res://Elementos/bolo assado/circulo bolo.glb" id="1_2wn7v"]
+
+[node name="circulo bolo" instance=ExtResource("1_2wn7v")]
+
+[node name="Cylinder_003" parent="." index="0"]
+transform = Transform3D(0.035, 0, 0, 0, 0.017, 0, 0, 0, 0.035, 0, 0, 0)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1e2f5yw7movr"]
+
+[ext_resource type="PackedScene" uid="uid://dw3ov8n0dq4bk" path="res://Elementos/bolo assado/coracao chocolate amargo.glb" id="1_6rrgu"]
+
+[node name="coracao chocolate amargo" instance=ExtResource("1_6rrgu")]
+
+[node name="Circle_007" parent="." index="0"]
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0, 0, 0)

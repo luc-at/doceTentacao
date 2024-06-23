@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dvfcsq8dgcqrs"
+path.s3tc="res://.godot/imported/cenário completo2_janela-janela alfa.png-139c340e209b3d79e50d8d029c265159.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "81c83feb2f2f961d72d1163427d73077"
+}
+
+[deps]
+
+source_file="res://assets/Isabela/cenários/recepção/cenário completo2_janela-janela alfa.png"
+dest_files=["res://.godot/imported/cenário completo2_janela-janela alfa.png-139c340e209b3d79e50d8d029c265159.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

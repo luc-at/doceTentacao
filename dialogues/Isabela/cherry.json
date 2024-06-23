@@ -1,0 +1,22 @@
+[
+	{
+		"commands_raw": "signal(voz,voz_personagem,true)\n[b]Cherry[/b]\nEca! Que bolo horroroso!!\nVou escrever um review péssimo!\n?> Me desculpa, achei que você ia gostar...{\nsignal(voz,voz_personagem,false)\nsignal(sai,true)\n->fim\n}\n?> Muita atitude para quem estava pedindo bolo no sigilo{\nsignal(voz,voz_personagem,false)\nsignal(sai,true)\n->fim\n}",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			40,
+			180
+		]
+	},
+	{
+		"commands_raw": "Ai ai ai... uma crítica ruim pode acabar com a nossa reputação.\nTenha mais foco nos próximos pedidos!",
+		"gnode_name": "fim",
+		"id": 1,
+		"name": "fim",
+		"position": [
+			140,
+			180
+		]
+	}
+]

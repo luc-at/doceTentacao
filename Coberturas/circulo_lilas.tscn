@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfrm1kusntneh"]
+
+[ext_resource type="PackedScene" uid="uid://dhqnuq4lgbr7t" path="res://Elementos/cobertura/circulo lilas.glb" id="1_e24rt"]
+
+[node name="circulo lilas" instance=ExtResource("1_e24rt")]
+
+[node name="Cylinder_019" parent="." index="0"]
+transform = Transform3D(0.036, 0, 0, 0, 0.036, 0, 0, 0, 0.036, 0, 0, 0)

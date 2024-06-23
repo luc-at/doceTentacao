@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://52svw2c82d53"]
+
+[ext_resource type="PackedScene" uid="uid://ljnbgl0edtkg" path="res://assets/Isabela/cenários/recepção/cenário completo2.glb" id="1_cnidf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pnse2"]
+size = Vector3(7.97894, 0.0388641, 10.7562)
+
+[node name="cenário completo2" instance=ExtResource("1_cnidf")]
+
+[node name="Iluminação" type="Node3D" parent="." index="28"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.33586)
+
+[node name="luz_balcão" type="OmniLight3D" parent="Iluminação" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.138589, 2.20721, 2.32636)
+light_energy = 2.0
+light_specular = 0.8
+shadow_enabled = true
+shadow_opacity = 0.8
+shadow_blur = 10.0
+omni_range = 3.56393
+
+[node name="Luz_01" type="OmniLight3D" parent="Iluminação" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.138589, 2.20138, -0.632183)
+light_energy = 4.0
+shadow_enabled = true
+shadow_opacity = 0.8
+shadow_blur = 10.0
+
+[node name="Luz_03" type="OmniLight3D" parent="Iluminação" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.84599, 2.20138, -0.632183)
+light_energy = 4.0
+shadow_enabled = true
+shadow_opacity = 0.8
+shadow_blur = 10.0
+
+[node name="Luz_04" type="OmniLight3D" parent="Iluminação" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17508, 2.20138, -0.632183)
+light_energy = 4.0
+shadow_enabled = true
+shadow_opacity = 0.8
+shadow_blur = 10.0
+
+[node name="Luz_02" type="OmniLight3D" parent="Iluminação" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.22504, -3.40431)
+shadow_enabled = true
+shadow_opacity = 0.8
+shadow_blur = 10.0
+
+[node name="Luz_janela" type="SpotLight3D" parent="Iluminação" index="5"]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0.905874, 1.70159, -4.55533)
+light_color = Color(1, 1, 0.607843, 1)
+light_indirect_energy = 2.0
+shadow_enabled = true
+shadow_opacity = 0.6
+shadow_blur = 10.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Iluminação" index="6"]
+transform = Transform3D(0.999998, -0.00204203, 1.7852e-10, -0.00204203, -0.999998, 8.74226e-08, 0, -8.74228e-08, -1, -1.68297, 0.120212, -5.34944)
+light_color = Color(0.968627, 0.960784, 0.878431, 1)
+light_energy = 8.0
+shadow_enabled = true
+shadow_opacity = 0.8
+shadow_blur = 10.0
+
+[node name="Chão" type="StaticBody3D" parent="." index="29"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.80639)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Chão" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00131229, -0.0180283, -2.55878)
+shape = SubResource("BoxShape3D_pnse2")

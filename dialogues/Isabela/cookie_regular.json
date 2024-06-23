@@ -1,0 +1,22 @@
+[
+	{
+		"commands_raw": "signal(voz,voz_personagem,true)\n[b]Cookie Monstrão[/b]\nÉ. Poderia ser melhor, mas vai servir\n?> Puxa, eu dei o meu melhor {\nsignal(voz,voz_personagem,false)\nsignal(sai,true)\n->fim\n}\n?> Como poderia ser melhor? Você queria um bolo de pré-treino! {\nsignal(voz,voz_personagem,false)\nsignal(sai,true)\n->fim\n}",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			-60,
+			80
+		]
+	},
+	{
+		"commands_raw": "Não foi um bolo ruim, mas o ideal é deixar os clientes muito mais animados!\nMais sorte na próxima vez.",
+		"gnode_name": "fim",
+		"id": 1,
+		"name": "fim",
+		"position": [
+			40,
+			80
+		]
+	}
+]

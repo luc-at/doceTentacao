@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bswgambu252nj"]
+
+[ext_resource type="PackedScene" uid="uid://csjibc1ajjnku" path="res://Elementos/decoração/cereja.glb" id="1_ue5jd"]
+
+[node name="cereja" instance=ExtResource("1_ue5jd")]
+
+[node name="cereja_001" parent="." index="0"]
+transform = Transform3D(0.852318, 0, 0, 0, 0.852318, 0, 0, 0, 0.852318, 0, 0, 0)

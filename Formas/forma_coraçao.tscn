@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://71m4kwee5nx8"]
+
+[ext_resource type="PackedScene" uid="uid://b8mlpjlic3u44" path="res://Elementos/forma/forma coraçao.glb" id="1_vb5lf"]
+
+[node name="forma coraçao" instance=ExtResource("1_vb5lf")]
+
+[node name="Circle_001" parent="." index="0"]
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0, 0.18, 0)
+
+[node name="Circle_002" parent="." index="1"]
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0, 0.18, 0)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpfotvl6kwp50"]
+
+[ext_resource type="PackedScene" uid="uid://dpovew84xryyn" path="res://Elementos/cobertura/coracao azul.glb" id="1_rqgde"]
+
+[node name="coracao azul" instance=ExtResource("1_rqgde")]
+
+[node name="Circle_009" parent="." index="0"]
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0, 0, 0)

@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://bcs5fspfanv3u"]
+
+[ext_resource type="PackedScene" uid="uid://52svw2c82d53" path="res://cenas/Isabela/cenários/Recepção_cenário.tscn" id="1_d1p1h"]
+[ext_resource type="PackedScene" uid="uid://dhxb6njhxma8v" path="res://cenas/Isabela/personagens/Wirdo/Wirdo_sem_caixa.tscn" id="1_vy3wu"]
+[ext_resource type="Script" path="res://scripts/Isabela/Pedido_03/Wirdo_sem_caixa.gd" id="2_nnfj6"]
+[ext_resource type="PackedScene" uid="uid://dhlpilco1j71p" path="res://cenas/Isabela/Pedido_03/2d_layout_pedido_03.tscn" id="3_4lxp5"]
+
+[sub_resource type="Animation" id="Animation_ebraj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.54242, -0.0214711, -7.53053)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xs5md"]
+resource_name = "chegando"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9, 2.2, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.54242, -0.0214711, -7.53053), Vector3(-1.54242, -0.0214711, -3.88418), Vector3(-1.54242, -0.0214711, -3.88418), Vector3(-0.0295733, -0.0214711, -1.42096)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.9, 2.3, 3.6, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0.359695, 0), Vector3(0, 0.359695, 0), Vector3(0, -0.0209266, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xv3iu"]
+_data = {
+"RESET": SubResource("Animation_ebraj"),
+"chegando": SubResource("Animation_xs5md")
+}
+
+[node name="Pedido_3" type="Node3D"]
+
+[node name="wirdo_4CAIXAglb" parent="." instance=ExtResource("1_vy3wu")]
+transform = Transform3D(0.148911, 0, 0, 0, 0.148911, 0, 0, 0, 0.148911, -1.54242, -0.0214711, -7.53053)
+script = ExtResource("2_nnfj6")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="wirdo_4CAIXAglb"]
+libraries = {
+"": SubResource("AnimationLibrary_xv3iu")
+}
+
+[node name="cenário completo2" parent="." instance=ExtResource("1_d1p1h")]
+
+[node name="2D_Layout_Pedido_03" parent="." instance=ExtResource("3_4lxp5")]
+
+[connection signal="animation_finished" from="wirdo_4CAIXAglb/AnimationPlayer2" to="wirdo_4CAIXAglb" method="_on_animation_player_2_animation_finished"]
+[connection signal="animação_andar" from="2D_Layout_Pedido_03" to="wirdo_4CAIXAglb" method="_on_d_layout_pedido_03_animação_andar"]

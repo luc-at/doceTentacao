@@ -1,0 +1,82 @@
+[
+	{
+		"commands_raw": "Está sentindo um cheiro forte de cereja?\n?> Sim, está me dando enjôo... {\nsignal(entra,entrada_personagem,true)\n->entrada\n}\n?> Humm...que delícia! {\nsignal(entra,entrada_personagem,true)\n->entrada\n}\n?> Você está viajando...não sinto nada {\nsignal(entra,entrada_personagem,true)\n->entrada\n}",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			0,
+			0
+		]
+	},
+	{
+		"commands_raw": "Olhá só! É a nossa segunda cliente!\n--- {\nsignal(voz,voz_personagem,true)\nsignal()\n-> cherry_1\n}",
+		"gnode_name": "entrada",
+		"id": 1,
+		"name": "entrada",
+		"position": [
+			360,
+			200
+		]
+	},
+	{
+		"commands_raw": "[b]Cherry[/b]\nQueridinho, agora é minha vez! acorda pra vida\n?> Oxe! Vá com calma ai! Pode pedir, mas com educação ->meu_bem\n?> Desculpa, fiquei tonto com o perfume...é Egeo? -> xuxu",
+		"gnode_name": "cherry_1",
+		"id": 2,
+		"name": "cherry_1",
+		"position": [
+			460,
+			200
+		]
+	},
+	{
+		"commands_raw": "[b]Cherry[/b]\nOk.... meu bem. \nPreciso de um bolinho pro meu xuxuzinho, você acha que consegue?\n?> Claro, pode fazer seu pedido... meu bem! ->pedido_1\n?> Acho que consigo ->pedido_1\n?> Eu sou o melhor confeiteiro dessa cidade! É claro que consigo ->pedido_1",
+		"gnode_name": "meu_bem",
+		"id": 3,
+		"name": "meu_bem",
+		"position": [
+			580,
+			140
+		]
+	},
+	{
+		"commands_raw": "[b]Cherry[/b]\nQue Egeo o que! É meu cheiro natural...\nMas não estou aqui para falar de mim [i]infelizmente[/i].\nQuero encomendar um bolo para o meu xuxuzinho!\n?>Qual o seu pedido? -> pedido_1",
+		"gnode_name": "xuxu",
+		"id": 4,
+		"name": "xuxu",
+		"position": [
+			580,
+			220
+		]
+	},
+	{
+		"commands_raw": "[b]Cherry[/b]\nQuero algo que lembre meu ursinho de mim... BEEEEMMM romântico tá?! \nPode caprichar nas cerejas, [b]É MINHA MARCA ASSINADA![/b] \nVai rápido porque é para ONTEM!\n?>Tou indo lá... fofinha. Volto ASSIM QUE DER, meu amor. ->pedido_2\n?>Ok ok. ->pedido_2",
+		"gnode_name": "pedido_1",
+		"id": 5,
+		"name": "pedido_1",
+		"position": [
+			700,
+			180
+		]
+	},
+	{
+		"commands_raw": "[b]Cherry[/b]\nPsiU... ei! \nEsqueci de dizer, não quero notinha e vou pagar em dinheiro vivo...\nIsso não pode ficar na minha fatura do cartão de crédito...\n?>Ok... {\nsignal(voz,voz_personagem,false)\nsignal()\n->fim\n}",
+		"gnode_name": "pedido_2",
+		"id": 6,
+		"name": "pedido_2",
+		"position": [
+			800,
+			180
+		]
+	},
+	{
+		"commands_raw": "Cada um com seus segredos...\nPara a cozinha!",
+		"gnode_name": "fim",
+		"id": 7,
+		"name": "fim",
+		"position": [
+			900,
+			180
+		]
+	}
+]

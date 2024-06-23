@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8ra3jgcnmvb"]
+
+[ext_resource type="PackedScene" uid="uid://djlmtnr111ryb" path="res://Elementos/forma/forma quadrada.glb" id="1_nee3g"]
+
+[node name="forma quadrada" instance=ExtResource("1_nee3g")]
+
+[node name="Cube_005" parent="." index="0"]
+transform = Transform3D(0.35, 0, 0, 0, 0.17, 0, 0, 0, 0.35, 0, 0.171997, 0)

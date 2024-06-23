@@ -1,0 +1,22 @@
+[
+	{
+		"commands_raw": "signal(voz,voz_personagem,true)\n[b]Cookie Monstrão[/b]\nMano!! Era disso que eu tava falando!\n[b]VAPO![/b] Minha mina acertou demais nessa confeitaria.\nValeu aí, brother!\n?> Que bom que gostou, volte sempre! {\nsignal(voz,voz_personagem,false)\nsignal(sai,true)\n-> fim\n}",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			-80,
+			120
+		]
+	},
+	{
+		"commands_raw": "Nosso primeiro cliente está 100% satisfeito!\nParabéns!",
+		"gnode_name": "fim",
+		"id": 1,
+		"name": "fim",
+		"position": [
+			20,
+			120
+		]
+	}
+]

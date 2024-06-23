@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dma7fpehdy6rp"]
+
+[ext_resource type="PackedScene" uid="uid://b6yk4j0geheru" path="res://cenas/Isabela/2D_Layout_Pedido_1.tscn" id="1_ddtcr"]
+[ext_resource type="Script" path="res://scripts/Isabela/Node_pai_Instruções.gd" id="2_chcyk"]
+[ext_resource type="Script" path="res://scripts/Isabela/Caixa_Script_Instruções.gd" id="3_n0ape"]
+
+[node name="Teste" instance=ExtResource("1_ddtcr")]
+script = ExtResource("2_chcyk")
+"instruções" = null
+
+[node name="Caixa" parent="." index="0"]
+script = ExtResource("3_n0ape")
+
+[connection signal="fim_instrução" from="Caixa" to="." method="_on_caixa_fim_instrução"]

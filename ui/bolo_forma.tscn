@@ -1,0 +1,247 @@
+[gd_scene load_steps=13 format=3 uid="uid://bv4ntra1o2ix4"]
+
+[ext_resource type="Script" path="res://ui/bolo_forma.gd" id="1_sr6e1"]
+[ext_resource type="Theme" uid="uid://chs6wp2da0pld" path="res://themes/estiloSabor.tres" id="2_4gvei"]
+[ext_resource type="FontFile" uid="uid://bdhvbkgcj888n" path="res://assets/Isabela/fonts/Roboto-Bold.ttf" id="2_k0cso"]
+[ext_resource type="Theme" uid="uid://dyj2k5tdhovo6" path="res://themes/estilo1.tres" id="3_lth25"]
+[ext_resource type="StyleBox" uid="uid://cml7j5qnieosm" path="res://assets/styles/botão_hover.tres" id="3_oy57b"]
+[ext_resource type="StyleBox" uid="uid://rki1peb46nfu" path="res://assets/styles/botão_pressionado.tres" id="4_ik84a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ip13"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ink6h"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_noorx"]
+content_margin_left = 8.0
+content_margin_top = 10.0
+content_margin_right = 8.0
+content_margin_bottom = 18.0
+bg_color = Color(0.984314, 0.972549, 0.92549, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 12
+border_color = Color(0.396078, 0.490196, 0.85098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id="Theme_kigay"]
+Button/colors/font_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 12
+Button/fonts/font = ExtResource("2_k0cso")
+Button/styles/disabled = SubResource("StyleBoxFlat_3ip13")
+Button/styles/focus = SubResource("StyleBoxFlat_ink6h")
+Button/styles/hover = ExtResource("3_oy57b")
+Button/styles/normal = SubResource("StyleBoxFlat_noorx")
+Button/styles/pressed = ExtResource("4_ik84a")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lqq0x"]
+bg_color = Color(0.929412, 0.909804, 0.968627, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.909804, 0.741176, 0.870588, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 20
+
+[sub_resource type="Theme" id="Theme_xrjvp"]
+Panel/styles/panel = SubResource("StyleBoxFlat_lqq0x")
+
+[node name="BoloForma" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sr6e1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -182.0
+offset_top = -43.0
+offset_right = 182.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Forma1" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_kigay")
+text = "        Quadrado          "
+
+[node name="Forma2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_kigay")
+text = "        Redondo          "
+
+[node name="Forma3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_kigay")
+text = "        Coração          "
+
+[node name="BoloFinal" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -231.0
+offset_top = -31.0
+offset_right = -81.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("3_lth25")
+text = "   Colocar Cobertura   "
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -317.5
+offset_top = -43.0
+offset_right = 317.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Sabor1" type="Button" parent="Control/HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("2_4gvei")
+text = "        Bolo         "
+
+[node name="Sabor2" type="Button" parent="Control/HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("2_4gvei")
+text = "        Chocolate        "
+
+[node name="Sabor3" type="Button" parent="Control/HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("2_4gvei")
+text = "         Baunilha          "
+
+[node name="Sabor4" type="Button" parent="Control/HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("2_4gvei")
+text = "        Morango          "
+
+[node name="Sabor5" type="Button" parent="Control/HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("2_4gvei")
+text = "        Chocolate Amargo          "
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 425.0
+offset_top = -2.0
+offset_right = -425.0
+offset_bottom = -595.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_xrjvp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.0
+offset_top = -19.0
+offset_right = 151.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center][font=res://assets/Isabela/fonts/Roboto-Bold.ttf] [color=#2a0746]ESCOLHA UMA[color=#657dd9] FORMA[/color] E UM [color=#e63562]SABOR[/color] PARA O SEU BOLO[/color] [/font][/center]
+"
+fit_content = true
+
+[connection signal="pressed" from="HBoxContainer/Forma1" to="." method="_on_forma_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/Forma2" to="." method="_on_forma_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Forma3" to="." method="_on_forma_3_pressed"]
+[connection signal="pressed" from="BoloFinal" to="." method="_on_bolo_final_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer2/Sabor1" to="." method="_on_sabor_1_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer2/Sabor2" to="." method="_on_sabor_2_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer2/Sabor3" to="." method="_on_sabor_3_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer2/Sabor4" to="." method="_on_sabor_4_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer2/Sabor5" to="." method="_on_sabor_5_pressed"]

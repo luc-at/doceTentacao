@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://dyj2k5tdhovo6"]
+
+[ext_resource type="FontFile" uid="uid://bdhvbkgcj888n" path="res://assets/Isabela/fonts/Roboto-Bold.ttf" id="1_remcb"]
+[ext_resource type="StyleBox" uid="uid://cml7j5qnieosm" path="res://assets/styles/botão_hover.tres" id="2_8nkh3"]
+[ext_resource type="StyleBox" uid="uid://d28vdcnj7i2vo" path="res://assets/styles/botão_normal.tres" id="3_cojsk"]
+[ext_resource type="StyleBox" uid="uid://rki1peb46nfu" path="res://assets/styles/botão_pressionado.tres" id="4_cb4ov"]
+
+[resource]
+Button/colors/font_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/font_sizes/font_size = 20
+Button/fonts/font = ExtResource("1_remcb")
+Button/styles/hover = ExtResource("2_8nkh3")
+Button/styles/normal = ExtResource("3_cojsk")
+Button/styles/pressed = ExtResource("4_cb4ov")

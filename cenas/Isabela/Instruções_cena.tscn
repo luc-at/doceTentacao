@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://satfr2nkgg3l"]
+
+[ext_resource type="PackedScene" uid="uid://52svw2c82d53" path="res://cenas/Isabela/cenários/Recepção_cenário.tscn" id="1_0wxol"]
+[ext_resource type="PackedScene" uid="uid://dma7fpehdy6rp" path="res://cenas/Isabela/2D_Layout_Instruções.tscn" id="2_f076d"]
+[ext_resource type="JSON" path="res://dialogues/Isabela/instrucoes.json" id="3_u2yjq"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="cenário recepção" parent="." instance=ExtResource("1_0wxol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Dialogue_Scene" parent="." instance=ExtResource("2_f076d")]
+"instruções" = ExtResource("3_u2yjq")

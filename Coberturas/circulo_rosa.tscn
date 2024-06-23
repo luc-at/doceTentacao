@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://qcefypmm1s2i"]
+
+[ext_resource type="PackedScene" uid="uid://fc63skh3mcp3" path="res://Elementos/cobertura/circulo rosa.glb" id="1_5ahf5"]
+
+[node name="circulo rosa" instance=ExtResource("1_5ahf5")]
+
+[node name="Cylinder_018" parent="." index="0"]
+transform = Transform3D(0.036, 0, 0, 0, 0.036, 0, 0, 0, 0.036, 0, 0, 0)

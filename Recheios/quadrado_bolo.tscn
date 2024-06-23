@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bh6tawchxvaff"]
+
+[ext_resource type="PackedScene" uid="uid://brw4xyadrwrk2" path="res://Elementos/bolo assado/quadrado bolo.glb" id="1_4ydj3"]
+
+[node name="quadrado bolo" instance=ExtResource("1_4ydj3")]
+
+[node name="Cube_003" parent="." index="0"]
+transform = Transform3D(0.35, 0, 0, 0, 0.165, 0, 0, 0, 0.35, 0, 0, 0)

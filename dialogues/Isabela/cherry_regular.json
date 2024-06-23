@@ -1,0 +1,22 @@
+[
+	{
+		"commands_raw": "signal(voz,voz_personagem,true)\n[b]Cherry[/b]\nQue bolo sem graça!\nAinda dá para comer, mas poderia melhorar, né?\n?> Eu tentei meu melhor. {\nsignal(voz,voz_personagem,false)\nsignal(sai,true)\n->fim\n}\n?> Para de escândalo, é um bolo normal! {\nsignal(voz,voz_personagem,false)\nsignal(sai,true)\n->fim\n}",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			0,
+			0
+		]
+	},
+	{
+		"commands_raw": "Você não foi mal, porém vamos melhorar nas próximas!",
+		"gnode_name": "fim",
+		"id": 1,
+		"name": "fim",
+		"position": [
+			320,
+			240
+		]
+	}
+]

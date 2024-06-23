@@ -1,0 +1,22 @@
+[
+	{
+		"commands_raw": "signal(voz,voz_personagem,true)\n[b]Wirdo Umbrella[/b]\nNossa. Eu estou sem palavras.\nNunca pensei que a alegria de existir seria um bolo.\nObrigado. De verdade.\n?> Imagina! {\nsignal(voz,voz_personagem,false)\nsignal(sai,true)\n->fim\n}",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			200,
+			160
+		]
+	},
+	{
+		"commands_raw": "Parabéns! Mais um cliente satisfeito!",
+		"gnode_name": "fim",
+		"id": 1,
+		"name": "fim",
+		"position": [
+			340,
+			180
+		]
+	}
+]

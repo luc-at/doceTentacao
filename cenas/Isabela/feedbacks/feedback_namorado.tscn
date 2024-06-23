@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8x5dk6o2ekb3"]
+
+[ext_resource type="PackedScene" uid="uid://52svw2c82d53" path="res://cenas/Isabela/cenários/Recepção_cenário.tscn" id="1_g18ye"]
+[ext_resource type="PackedScene" uid="uid://d1iyd56vabxq1" path="res://cenas/Isabela/personagens/Namorado/namorado_com_caixa.tscn" id="2_yy8ne"]
+[ext_resource type="Script" path="res://scripts/Isabela/Feedbacks/Namorado_Caixa.gd" id="3_tuw5q"]
+[ext_resource type="PackedScene" uid="uid://dto2pkimchcpc" path="res://cenas/Isabela/feedbacks/2D_Layout_Feedback_Namorado.tscn" id="4_k477h"]
+
+[sub_resource type="Animation" id="Animation_uhrcj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -1.23349)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3lmfd"]
+resource_name = "embora"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 2.4, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -1.23349), Vector3(0, 0, -1.23349), Vector3(-1.53552, 0, -6.35188), Vector3(-1.53552, 0, -9.82396)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -2.84222, 0), Vector3(0, -3.13383, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ap7pk"]
+_data = {
+"RESET": SubResource("Animation_uhrcj"),
+"embora": SubResource("Animation_3lmfd")
+}
+
+[node name="feedback_namorado" type="Node3D"]
+
+[node name="cenário completo2" parent="." instance=ExtResource("1_g18ye")]
+
+[node name="Namorado" parent="." instance=ExtResource("2_yy8ne")]
+transform = Transform3D(0.149, 0, 0, 0, 0.149, 0, 0, 0, 0.149, 0, 0, -1.23349)
+script = ExtResource("3_tuw5q")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Namorado"]
+libraries = {
+"": SubResource("AnimationLibrary_ap7pk")
+}
+
+[node name="2D_Layout_Feedback_04" parent="." instance=ExtResource("4_k477h")]
+
+[connection signal="animação_andar" from="2D_Layout_Feedback_04" to="Namorado" method="_on_d_layout_feedback_04_animação_andar"]

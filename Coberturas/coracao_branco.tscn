@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://75iy25yis3hf"]
+
+[ext_resource type="PackedScene" uid="uid://dm86uuk1p78do" path="res://Elementos/cobertura/coracao branco.glb" id="1_3qm3x"]
+
+[node name="coracao branco" instance=ExtResource("1_3qm3x")]
+
+[node name="Circle_008" parent="." index="0"]
+transform = Transform3D(0.036, 0, 0, 0, 0.036, 0, 0, 0, 0.036, 0, 0, 0)

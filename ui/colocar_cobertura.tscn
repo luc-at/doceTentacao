@@ -1,0 +1,283 @@
+[gd_scene load_steps=20 format=3 uid="uid://b3qx4wqmpjf68"]
+
+[ext_resource type="Script" path="res://ui/colocar_cobertura.gd" id="1_arqc8"]
+[ext_resource type="FontFile" uid="uid://bdhvbkgcj888n" path="res://assets/Isabela/fonts/Roboto-Bold.ttf" id="2_fcfuy"]
+[ext_resource type="StyleBox" uid="uid://cml7j5qnieosm" path="res://assets/styles/botão_hover.tres" id="3_3n1jl"]
+[ext_resource type="StyleBox" uid="uid://rki1peb46nfu" path="res://assets/styles/botão_pressionado.tres" id="4_leett"]
+[ext_resource type="Theme" uid="uid://dyj2k5tdhovo6" path="res://themes/estilo1.tres" id="5_eyghs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0w1xk"]
+content_margin_left = 8.0
+content_margin_top = 10.0
+content_margin_right = 8.0
+content_margin_bottom = 18.0
+bg_color = Color(0.984314, 0.972549, 0.92549, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 12
+border_color = Color(0.109804, 0.556863, 0.764706, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id="Theme_q4o52"]
+Button/colors/font_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("2_fcfuy")
+Button/styles/hover = ExtResource("3_3n1jl")
+Button/styles/normal = SubResource("StyleBoxFlat_0w1xk")
+Button/styles/pressed = ExtResource("4_leett")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txbpc"]
+content_margin_left = 8.0
+content_margin_top = 10.0
+content_margin_right = 8.0
+content_margin_bottom = 18.0
+bg_color = Color(0.984314, 0.972549, 0.92549, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 12
+border_color = Color(0.93429, 0.885727, 0.983044, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id="Theme_wf6rv"]
+Button/colors/font_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("2_fcfuy")
+Button/styles/hover = ExtResource("3_3n1jl")
+Button/styles/normal = SubResource("StyleBoxFlat_txbpc")
+Button/styles/pressed = ExtResource("4_leett")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdt7u"]
+content_margin_left = 8.0
+content_margin_top = 10.0
+content_margin_right = 8.0
+content_margin_bottom = 18.0
+bg_color = Color(0.984314, 0.972549, 0.92549, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 12
+border_color = Color(0.6, 0.537255, 0.933333, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id="Theme_qo62c"]
+Button/colors/font_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("2_fcfuy")
+Button/styles/hover = ExtResource("3_3n1jl")
+Button/styles/normal = SubResource("StyleBoxFlat_xdt7u")
+Button/styles/pressed = ExtResource("4_leett")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rswlg"]
+content_margin_left = 8.0
+content_margin_top = 10.0
+content_margin_right = 8.0
+content_margin_bottom = 18.0
+bg_color = Color(0.984314, 0.972549, 0.92549, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 12
+border_color = Color(0.0980392, 0.0196078, 0.152941, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id="Theme_v6qhk"]
+Button/colors/font_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("2_fcfuy")
+Button/styles/hover = ExtResource("3_3n1jl")
+Button/styles/normal = SubResource("StyleBoxFlat_rswlg")
+Button/styles/pressed = ExtResource("4_leett")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88sbp"]
+content_margin_left = 8.0
+content_margin_top = 10.0
+content_margin_right = 8.0
+content_margin_bottom = 18.0
+bg_color = Color(0.984314, 0.972549, 0.92549, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 12
+border_color = Color(0.835294, 0.254902, 0.596078, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id="Theme_okom0"]
+Button/colors/font_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("2_fcfuy")
+Button/styles/hover = ExtResource("3_3n1jl")
+Button/styles/normal = SubResource("StyleBoxFlat_88sbp")
+Button/styles/pressed = ExtResource("4_leett")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irsu6"]
+content_margin_left = 8.0
+content_margin_top = 10.0
+content_margin_right = 8.0
+content_margin_bottom = 18.0
+bg_color = Color(0.984314, 0.972549, 0.92549, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 12
+border_color = Color(0.917647, 0.2, 0.262745, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id="Theme_2ehib"]
+Button/colors/font_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("2_fcfuy")
+Button/styles/hover = ExtResource("3_3n1jl")
+Button/styles/normal = SubResource("StyleBoxFlat_irsu6")
+Button/styles/pressed = ExtResource("4_leett")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0f3f1"]
+bg_color = Color(0.929412, 0.909804, 0.968627, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.909804, 0.741176, 0.870588, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 20
+
+[sub_resource type="Theme" id="Theme_83nl0"]
+Panel/styles/panel = SubResource("StyleBoxFlat_0f3f1")
+
+[node name="ColocarCobertura" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_arqc8")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -207.5
+offset_top = -52.0
+offset_right = 207.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Cobertura1" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_q4o52")
+text = "  Azul  "
+
+[node name="Cobertura2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_wf6rv")
+text = "Branco"
+
+[node name="Cobertura3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_qo62c")
+text = "  Lilás  "
+
+[node name="Cobertura4" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_v6qhk")
+text = "Preto"
+
+[node name="Cobertura5" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_okom0")
+text = "Rosa"
+
+[node name="Cobertura6" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_2ehib")
+text = "Vermelho"
+
+[node name="CoberturaCenaMuda" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -52.0
+offset_right = -43.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("5_eyghs")
+text = "Colocar Decorações"
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 425.0
+offset_top = -2.0
+offset_right = -425.0
+offset_bottom = -595.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_83nl0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.0
+offset_top = -19.0
+offset_right = 151.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center][font=res://assets/Isabela/fonts/Roboto-Bold.ttf] [color=#2a0746]ESCOLHA A [i]COR[/i] DA
+ COBERTURA DO BOLO[/color] [/font][/center]
+"
+fit_content = true
+
+[connection signal="pressed" from="HBoxContainer/Cobertura1" to="." method="_on_cobertura_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/Cobertura2" to="." method="_on_cobertura_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Cobertura3" to="." method="_on_cobertura_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/Cobertura4" to="." method="_on_cobertura_4_pressed"]
+[connection signal="pressed" from="HBoxContainer/Cobertura5" to="." method="_on_cobertura_5_pressed"]
+[connection signal="pressed" from="HBoxContainer/Cobertura6" to="." method="_on_cobertura_6_pressed"]
+[connection signal="pressed" from="CoberturaCenaMuda" to="." method="_on_cobertura_cena_muda_pressed"]

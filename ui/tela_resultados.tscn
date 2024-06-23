@@ -1,0 +1,81 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjayuj5wuo3xo"]
+
+[ext_resource type="Script" path="res://ui/tela_resultados.gd" id="1_f73af"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_tm7ic"]
+resource_local_to_scene = true
+
+[node name="TelaResultados" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f73af")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ImageTexture_tm7ic")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.0
+offset_top = 450.0
+offset_right = 72.0
+offset_bottom = 473.0
+grow_horizontal = 2
+text = "Sua pontuação foi:"
+
+[node name="pontos" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 488.0
+offset_right = 20.0
+offset_bottom = 530.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "##"
+
+[node name="vencer" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -341.5
+offset_top = -41.5
+offset_right = 341.5
+offset_bottom = 41.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "Você Venceu ou Perdeu"
+
+[node name="VoltarNivel" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -231.0
+offset_top = -113.0
+offset_right = -96.0
+offset_bottom = -82.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Voltar aos níveis"

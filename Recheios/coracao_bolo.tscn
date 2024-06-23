@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfedm4mg6tnqw"]
+
+[ext_resource type="PackedScene" uid="uid://cus5cgma3u6yv" path="res://Elementos/bolo assado/coracao bolo.glb" id="1_iv4vb"]
+
+[node name="coracao bolo" instance=ExtResource("1_iv4vb")]
+
+[node name="Circle" parent="." index="0"]
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0, 0, 0)

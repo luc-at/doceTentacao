@@ -1,0 +1,137 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6yk4j0geheru"]
+
+[ext_resource type="Script" path="res://dialogue_scene.gd" id="1_6kd2f"]
+[ext_resource type="Script" path="res://cenas/Node2D.gd" id="1_13iei"]
+[ext_resource type="Script" path="res://addons/ez_dialogue/ez_dialogue_node.gd" id="4_cmbne"]
+
+[sub_resource type="JSON" id="JSON_65hgt"]
+data = [{
+"commands_raw": "Você chegou! Bem na hora de abrir a confeitaria.
+?>... {
+signal(entra,entrada_personagem,true)
+-> entrada personagem
+}",
+"gnode_name": "start",
+"id": 0.0,
+"name": "start",
+"position": [60.0, 180.0]
+}, {
+"commands_raw": "[bgcolor=#CC1334][b]  Cookie Monstrão  [/b][/bgcolor]
+
+Fala cara! Blz?
+Minha mina sempre me traz uns bolos TOP daqui, 
+queria encomendar um!
+
+
+?> Que bacana! Qual o nome dela? -> namorada
+?> Como você quer o seu bolo? -> pedido
+",
+"gnode_name": "inicio cookie",
+"id": 1.0,
+"name": "inicio cookie",
+"position": [320.0, 200.0]
+}, {
+"commands_raw": "[bgcolor=#CC1334][b]  Cookie Monstrão  [/b][/bgcolor]
+
+Cara...vou te falar que não lembro muito o nome dela não...
+Acho que era [b]Che[/b]ila? Ou será que era Ma[b]rry[/b]?
+?> Melhor falar sobre o bolo... -> pedido
+?> A gente tem tanta coisa na cabeça, né...
+Como você vai querer o seu bolo? -> pedido",
+"gnode_name": "namorada",
+"id": 2.0,
+"name": "namorada",
+"position": [440.0, 80.0]
+}, {
+"commands_raw": "[bgcolor=#CC1334][b]  Cookie Monstrão  [/b][/bgcolor]
+
+Tô indo para a academia agora é quero algo para o pré-treino!
+Também quero algo que lembre o meu shape, [b]GRANDÃO[/b]!
+?> Bolo de pré-treino? Pode deixar... {
+signal(voz,voz_personagem,false)
+-> fim
+}
+?> Combinado! {
+signal(voz,voz_personagem,false)
+-> fim
+}",
+"gnode_name": "pedido",
+"id": 4.0,
+"name": "pedido",
+"position": [440.0, 240.0]
+}, {
+"commands_raw": "Para a cozinha!",
+"gnode_name": "fim",
+"id": 5.0,
+"name": "fim",
+"position": [600.0, 180.0]
+}, {
+"commands_raw": "Parece que nosso primeiro cliente do dia está chegando.
+--- {
+signal(voz,voz_personagem,true)
+->inicio cookie
+}
+",
+"gnode_name": "entrada personagem",
+"id": 6.0,
+"name": "entrada personagem",
+"position": [160.0, 200.0]
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72icq"]
+content_margin_left = 24.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 24.0
+bg_color = Color(0.827451, 0.623529, 0.984314, 1)
+border_width_left = 8
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 8
+border_color = Color(0.54902, 0.254902, 0.776471, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Dialogue_Scene" type="Node2D"]
+script = ExtResource("1_6kd2f")
+dialogue1_json = SubResource("JSON_65hgt")
+
+[node name="Caixa" type="Node2D" parent="."]
+script = ExtResource("1_13iei")
+
+[node name="Tela" type="CanvasLayer" parent="Caixa"]
+
+[node name="PanelContainer" type="PanelContainer" parent="Caixa/Tela"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -295.0
+offset_top = 250.0
+offset_right = 295.0
+offset_bottom = 294.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 2
+size_flags_vertical = 6
+theme_override_styles/panel = SubResource("StyleBoxFlat_72icq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Caixa/Tela/PanelContainer"]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="RichTextLabel" parent="Caixa/Tela/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.54902, 0.254902, 0.776471, 1)
+bbcode_enabled = true
+fit_content = true
+
+[node name="EzDialogue" type="Node" parent="."]
+script = ExtResource("4_cmbne")
+
+[connection signal="custom_signal_received" from="EzDialogue" to="." method="_on_ez_dialogue_custom_signal_received"]
+[connection signal="dialogue_generated" from="EzDialogue" to="." method="_on_ez_dialogue_dialogue_generated"]
+[connection signal="end_of_dialogue_reached" from="EzDialogue" to="." method="_on_ez_dialogue_end_of_dialogue_reached"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://ceexmf2805g1n"]
+
+[ext_resource type="Script" path="res://scripts/ChoiceButton.gd" id="1_n0xgb"]
+[ext_resource type="FontFile" uid="uid://cb4tmyecvtwt5" path="res://assets/fonts/Roboto-Medium.ttf" id="1_ytsry"]
+[ext_resource type="StyleBox" uid="uid://cml7j5qnieosm" path="res://assets/styles/botão_hover.tres" id="2_a3485"]
+[ext_resource type="StyleBox" uid="uid://d28vdcnj7i2vo" path="res://assets/styles/botão_normal.tres" id="3_o6sse"]
+[ext_resource type="StyleBox" uid="uid://rki1peb46nfu" path="res://assets/styles/botão_pressionado.tres" id="4_25wqi"]
+
+[sub_resource type="Theme" id="Theme_wfssf"]
+Button/colors/font_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/colors/font_disabled_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/colors/font_focus_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/colors/font_hover_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/colors/font_hover_pressed_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/colors/font_outline_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/colors/font_pressed_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/fonts/font = ExtResource("1_ytsry")
+Button/styles/hover = ExtResource("2_a3485")
+Button/styles/normal = ExtResource("3_o6sse")
+Button/styles/pressed = ExtResource("4_25wqi")
+
+[node name="ChoiceButton" type="Button"]
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = SubResource("Theme_wfssf")
+alignment = 0
+script = ExtResource("1_n0xgb")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

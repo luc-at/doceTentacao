@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c352sk4lwvmsn"]
+
+[ext_resource type="PackedScene" uid="uid://c5nhir47i5bqa" path="res://Elementos/cobertura/circulo azul.glb" id="1_2xi1h"]
+
+[node name="circulo azul" instance=ExtResource("1_2xi1h")]
+
+[node name="Cylinder_017" parent="." index="0"]
+transform = Transform3D(0.036, 0, 0, 0, 0.036, 0, 0, 0, 0.036, 0, 0, 0)

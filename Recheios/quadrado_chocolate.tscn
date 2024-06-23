@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6jwaqk2si6qj"]
+
+[ext_resource type="PackedScene" uid="uid://cjpksiep4yjjb" path="res://Elementos/bolo assado/quadrado chocolate.glb" id="1_7iy7m"]
+
+[node name="quadrado chocolate" instance=ExtResource("1_7iy7m")]
+
+[node name="Cube_010" parent="." index="0"]
+transform = Transform3D(0.35, 0, 0, 0, 0.165, 0, 0, 0, 0.35, 0, 0, 0)

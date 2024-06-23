@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://liyh8r7haeww"]
+
+[ext_resource type="PackedScene" uid="uid://ba145j3jskevn" path="res://Elementos/bolo assado/circulo chocolate.glb" id="1_dyph6"]
+
+[node name="circulo chocolate" instance=ExtResource("1_dyph6")]
+
+[node name="Cylinder_012" parent="." index="0"]
+transform = Transform3D(0.035, 0, 0, 0, 0.017, 0, 0, 0, 0.035, 0, 0, 0)

@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0hknt6bgpbqn"]
+
+[ext_resource type="Script" path="res://scripts/Isabela/tela_inicial.gd" id="1_43pnw"]
+[ext_resource type="Texture2D" uid="uid://dt5fx4whu2gt3" path="res://assets/Isabela/imagens/Render_inicio.png" id="1_jq2kn"]
+[ext_resource type="Texture2D" uid="uid://bp5s50pndufr3" path="res://assets/Isabela/imagens/Logo.png" id="1_k5pyf"]
+[ext_resource type="Theme" uid="uid://dyj2k5tdhovo6" path="res://themes/estilo1.tres" id="4_2xeg7"]
+
+[node name="Tela_inicial" type="Node2D"]
+script = ExtResource("1_43pnw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -529.0
+offset_top = -286.0
+offset_right = -281.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("1_k5pyf")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -658.0
+offset_top = -370.0
+offset_right = 494.0
+offset_bottom = 278.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.15, 1.15)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_jq2kn")
+expand_mode = 3
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+z_index = 1
+offset_left = 915.0
+offset_top = 541.0
+offset_right = 1099.0
+offset_bottom = 593.0
+theme = ExtResource("4_2xeg7")
+text = "Começar jogo"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

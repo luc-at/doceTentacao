@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://ceexmf2805g1n"]
+
+[ext_resource type="FontFile" uid="uid://cb4tmyecvtwt5" path="res://assets/Isabela/fonts/Roboto-Medium.ttf" id="1_4fdaa"]
+[ext_resource type="StyleBox" uid="uid://cml7j5qnieosm" path="res://assets/Isabela/styles/botão_hover.tres" id="2_lt3nh"]
+[ext_resource type="StyleBox" uid="uid://d28vdcnj7i2vo" path="res://assets/Isabela/styles/botão_normal.tres" id="3_xsfaw"]
+[ext_resource type="StyleBox" uid="uid://rki1peb46nfu" path="res://assets/Isabela/styles/botão_pressionado.tres" id="4_t86cm"]
+[ext_resource type="Script" path="res://scripts/Isabela/ChoiceButton.gd" id="5_g6s1x"]
+
+[sub_resource type="Theme" id="Theme_wfssf"]
+Button/colors/font_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/colors/font_disabled_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/colors/font_focus_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/colors/font_hover_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/colors/font_hover_pressed_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/colors/font_outline_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/colors/font_pressed_color = Color(0.164706, 0.027451, 0.27451, 1)
+Button/fonts/font = ExtResource("1_4fdaa")
+Button/styles/hover = ExtResource("2_lt3nh")
+Button/styles/normal = ExtResource("3_xsfaw")
+Button/styles/pressed = ExtResource("4_t86cm")
+
+[node name="ChoiceButton" type="Button"]
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = SubResource("Theme_wfssf")
+alignment = 0
+script = ExtResource("5_g6s1x")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

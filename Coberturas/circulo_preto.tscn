@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://tmbeu3pdiqk5"]
+
+[ext_resource type="PackedScene" uid="uid://dud8lm0u0583g" path="res://Elementos/cobertura/circulo preto.glb" id="1_admjp"]
+
+[node name="circulo preto" instance=ExtResource("1_admjp")]
+
+[node name="Cylinder_020" parent="." index="0"]
+transform = Transform3D(0.036, 0, 0, 0, 0.036, 0, 0, 0, 0.036, 0, 0, 0)

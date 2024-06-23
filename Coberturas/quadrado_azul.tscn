@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7t4whtmlgn6k"]
+
+[ext_resource type="PackedScene" uid="uid://daf55xi8dqxpj" path="res://Elementos/cobertura/quadrado azul.glb" id="1_j7lhy"]
+
+[node name="quadrado azul" instance=ExtResource("1_j7lhy")]
+
+[node name="Cube_015" parent="." index="0"]
+transform = Transform3D(0.032, 0, 0, 0, 0.032, 0, 0, 0, 0.032, 0, 0, 0)

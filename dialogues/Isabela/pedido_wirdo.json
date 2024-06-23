@@ -1,0 +1,62 @@
+[
+	{
+		"commands_raw": "Ainda estou meio tonto com o último pedido!\nAcho que estou sentindo o clima pesar...\n?>...{\nsignal(entra,entrada_personagem,true)\n->chegada\n}",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			400,
+			200
+		]
+	},
+	{
+		"commands_raw": "Mais um cliente!\nNossa, que cara desanimado\n?>...{\nsignal(voz,voz_personagem,true)\n->apresentação\n}",
+		"gnode_name": "chegada",
+		"id": 1,
+		"name": "chegada",
+		"position": [
+			500,
+			200
+		]
+	},
+	{
+		"commands_raw": "[b]Wirdo Umbrella[/b]\nOlá, bom dia.\nOu melhor...\"Olá, dia\"\n?> Oi! Tudo bem com você? -> bate_papo\n?> Vamos cortar o bate-papo? O que você quer no seu bolo? -> pedido",
+		"gnode_name": "apresentação",
+		"id": 2,
+		"name": "apresentação",
+		"position": [
+			600,
+			200
+		]
+	},
+	{
+		"commands_raw": "[b]Wirdo Umbrella[/b]\nVenho aqui preencher um buraco na minha alma...e na minha barriga.\nGostaria de um bolo tão doce quanto a minha vida, que é bem amarga.\nAlgo que reflita a profundidade da minha existência.\n?> Era melhor ir no psicólogo! Mas pode deixar -> fim\n?> Tadinho... vou fazer o meu melhor. -> fim",
+		"gnode_name": "pedido",
+		"id": 3,
+		"name": "pedido",
+		"position": [
+			720,
+			200
+		]
+	},
+	{
+		"commands_raw": "signal(voz,voz_personagem,false)\nÉ cada doido que aparece...\nPara a cozinha!",
+		"gnode_name": "fim",
+		"id": 4,
+		"name": "fim",
+		"position": [
+			820,
+			200
+		]
+	},
+	{
+		"commands_raw": "[b]Wirdo Umbrella[/b]\nNão sei se poderia estar melhor...mas também não poderia estar pior.\nApenas estou. Vagava sem rumo e me lembrei dessa confeitaria, já vi minha cunhada com uma sacola daqui, e decidi experimentar.\n?> Estamos ganhando vários clientes novos! Vai querer um bolo? -> pedido\n?> Talvez um bolo ajude a melhorar o seu humor -> pedido",
+		"gnode_name": "bate_papo",
+		"id": 5,
+		"name": "bate_papo",
+		"position": [
+			720,
+			280
+		]
+	}
+]

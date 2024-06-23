@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdd8y38aosmos"]
+
+[ext_resource type="PackedScene" uid="uid://bx0divfhs6wa2" path="res://Elementos/cobertura/coracao rosa.glb" id="1_j6m2c"]
+
+[node name="coracao rosa" instance=ExtResource("1_j6m2c")]
+
+[node name="Circle_010" parent="." index="0"]
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0, 0, 0)

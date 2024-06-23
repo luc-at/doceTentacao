@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccge5k5dqh6px"]
+
+[ext_resource type="PackedScene" uid="uid://33batvakmdsa" path="res://Elementos/cobertura/circulo branco.glb" id="1_t3eiw"]
+
+[node name="circulo branco" instance=ExtResource("1_t3eiw")]
+
+[node name="Cylinder_016" parent="." index="0"]
+transform = Transform3D(0.036, 0, 0, 0, 0.036, 0, 0, 0, 0.036, 0, 0, 0)

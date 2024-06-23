@@ -1,0 +1,22 @@
+[
+	{
+		"commands_raw": "signal(voz,voz_personagem,true)\n[b]Cherry[/b]\nEra isso mesmo que eu queria!\nMeu xuxuzinho vai A-M-A-R! \nMas ei, não fica comentando sobre isso, hein? Ser famosa é muito complicado!\n?> Que bom que você gostou! Volte sempre. {\nsignal(voz,voz_personagem,false)\nsignal(sai,true)\n->fim\n}\n?> Isso é um pouco estranho, mas tudo bem... {\nsignal(voz,voz_personagem,false)\nsignal(sai,true)\n->fim\n}",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			80,
+			280
+		]
+	},
+	{
+		"commands_raw": "Nunca vi alguém ser tão secreto com bolo, mas pelo menos fizemos uma cliente feliz!",
+		"gnode_name": "fim",
+		"id": 1,
+		"name": "fim",
+		"position": [
+			640,
+			720
+		]
+	}
+]

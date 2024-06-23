@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://knviwym08fqb"]
+
+[ext_resource type="PackedScene" uid="uid://52svw2c82d53" path="res://cenas/Isabela/cenários/Recepção_cenário.tscn" id="1_pdku4"]
+[ext_resource type="PackedScene" uid="uid://didr5dmwekvcn" path="res://cenas/Isabela/feedbacks/2D_Layout_Feedback_Cherry.tscn" id="2_wr8d4"]
+[ext_resource type="PackedScene" uid="uid://dq5ynqaafxmts" path="res://cenas/Isabela/personagens/Cherry/Cherry com caixa.tscn" id="3_4dr4w"]
+[ext_resource type="Script" path="res://scripts/Isabela/Feedbacks/Cherry_Caixa.gd" id="4_dvbgp"]
+
+[sub_resource type="Animation" id="Animation_dikd5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -1.16373)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bgxtu"]
+resource_name = "embora"
+length = 2.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 1, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -1.16373), Vector3(-1.40262, 0, -2.34012), Vector3(-1.40262, 0, -2.34012), Vector3(-1.40262, 0, -8.23661)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -2.36194, 0), Vector3(-1.44847e-11, -2.36147, 1.46451e-11), Vector3(-1.44847e-11, -3.09878, 1.46451e-11)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_snlys"]
+_data = {
+"RESET": SubResource("Animation_dikd5"),
+"embora": SubResource("Animation_bgxtu")
+}
+
+[node name="Feedback_Cherry" type="Node3D"]
+
+[node name="cenário completo2" parent="." instance=ExtResource("1_pdku4")]
+
+[node name="Node _Pai_Feedback_cherry" parent="." instance=ExtResource("2_wr8d4")]
+
+[node name="cherry5" parent="." instance=ExtResource("3_4dr4w")]
+transform = Transform3D(0.132, 0, 0, 0, 0.132, 0, 0, 0, 0.132, 0, 0, -1.16373)
+script = ExtResource("4_dvbgp")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="cherry5"]
+libraries = {
+"": SubResource("AnimationLibrary_snlys")
+}
+
+[connection signal="animação_andar" from="Node _Pai_Feedback_cherry" to="cherry5" method="_on_node__pai_feedback_cherry_animação_andar"]

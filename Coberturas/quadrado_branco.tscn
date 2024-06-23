@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d03laua3umk2d"]
+
+[ext_resource type="PackedScene" uid="uid://db3lbfyccrcjy" path="res://Elementos/cobertura/quadrado branco.glb" id="1_a08h1"]
+
+[node name="quadrado branco" instance=ExtResource("1_a08h1")]
+
+[node name="Cube_014" parent="." index="0"]
+transform = Transform3D(0.032, 0, 0, 0, 0.032, 0, 0, 0, 0.032, 0, 0, 0)

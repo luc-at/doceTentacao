@@ -1,0 +1,22 @@
+[
+	{
+		"commands_raw": "signal(voz,voz_personagem,true)\n[b]Wirdo Umbrella[/b]\nVim com expectativas baixas, mas você conseguiu destruí-las completamente.\nTe parabenizaria se não estivesse tão enojado com isso que você chama de bolo.\n?> Me desculpaaaaa!! Juro que vou tentar ser uma pessoa melhor! {\nsignal(voz,voz_personagem,false)\nsignal(sai,true)\n->fim\n}\n?> Mas eu te fiz um bom bolo!!! {\nsignal(voz,voz_personagem,false)\nsignal(sai,true)\n->fim\n}",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			800,
+			1040
+		]
+	},
+	{
+		"commands_raw": "Você precisa prestar mais atenção aos [i]desejos especiais[/i] dos clientes!",
+		"gnode_name": "fim",
+		"id": 1,
+		"name": "fim",
+		"position": [
+			0,
+			0
+		]
+	}
+]
